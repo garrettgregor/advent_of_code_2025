@@ -2,8 +2,9 @@
 
 source "http://rubygems.org"
 
-ruby "3.3.6"
+ruby "3.4.5"
 
+gem "amazing_print"
 gem "pry"
 gem "rspec"
 gem "rubocop"
