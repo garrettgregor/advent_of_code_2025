@@ -22,6 +22,7 @@ class SecretEntrance
     when "R"
       new_index = (current_index + distance) % @dial.length
     end
+
     new_index
   end
 
@@ -33,10 +34,7 @@ class SecretEntrance
 
       @zero_counter += 1 if current_value.zero?
     end
-    # for each set of instructions
-    # if it begins with R, add to the index up to the max
-    # if it begins with L, subtract from the index up to the min
-    # assess the ending value - if it is 0, add to the zero_counter
+
     @zero_counter
   end
 end
