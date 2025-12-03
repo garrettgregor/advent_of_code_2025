@@ -1,42 +1,13 @@
 
 # What does this PR do?
 
-- [ ] New feature
-- [ ] Bug Fix
-- [ ] This broke nothing
-- [ ] This broke some stuff
-- [ ] This broke everything
-
-## Implements/Fixes
-
-closes #
+- [ ] 🍕 New feature
+- [ ] 🐛 Bugfix
+- [ ] 🤷🏻‍♂️ Other
 
 ## Test Coverage
 
 - [ ] Wrote Tests
-- [ ] Implemented
-- [ ] Reviewed
-- [ ] The code will run locally
-
-<!-- *Include Ran Test Coverage below...* -->
-
-```zsh
-
-```
-
-### Testing Changes
-
-- [ ] No Tests have been changed
-- [ ] Some Tests have been changed
-- [ ] All of the Tests have been changed(Please describe what in the world happened)
-
-Checklist:
-
-- [ ] My code has no unused/commented out code
-- [ ] I have reviewed my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have fully tested my code
-- [ ] I have rubocopped my code
 
 ### How do I feel about this?
 <!-- It's working: -->
