@@ -4,10 +4,10 @@ require "../spec_helper"
 require "secret_entrance"
 
 RSpec.describe SecretEntrance do
-  describe "#initialize" do
-    let!(:file_path) { "./fixtures/example_1.txt" }
-    let!(:secret) { described_class.new(file_path) }
+  let!(:file_path) { "./fixtures/example_1.txt" }
+  let!(:secret) { described_class.new(file_path) }
 
+  describe "#initialize" do
     it "has instructions" do
       result = %w[L68
                   L30
@@ -44,6 +44,20 @@ RSpec.describe SecretEntrance do
       secret.zero_counter += 10
 
       expect(secret.zero_counter).to eq(10)
+    end
+  end
+
+  describe "#move" do
+    it "moves around the dial" do
+      expect(secret.move("R", 97, 6)).to eq(3)
+      expect(secret.move("R", 97, 106)).to eq(3)
+      expect(secret.move("L", 6, 10)).to eq(96)
+    end
+  end
+
+  describe "#password" do
+    it "calculates the number of times the dial was on 0" do
+      expect(secret.password).to eq(3)
     end
   end
 end

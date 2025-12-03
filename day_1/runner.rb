@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-require "./lib/historian_hysteria"
+require "./lib/secret_entrance"
 
 PATH = "./fixtures/puzzle_input_1.txt"
-historian = HistorianHysteria.new(PATH)
+puzzle = SecretEntrance.new(PATH)
 
-puts "Part 1: #{historian.sum_of_differences}"
-puts "Part 2: #{historian.sum_of_multiplied_scores}"
+puts "Part 1: #{puzzle.password}"
