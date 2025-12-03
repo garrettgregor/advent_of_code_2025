@@ -74,7 +74,7 @@ DEPENDENCIES
   simplecov
 
 RUBY VERSION
-   ruby 3.4.5p51
+   ruby 3.4.7p58
 
 BUNDLED WITH
-   2.5.23
+   4.0.0
