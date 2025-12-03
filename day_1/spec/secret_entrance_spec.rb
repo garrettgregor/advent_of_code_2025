@@ -33,11 +33,17 @@ RSpec.describe SecretEntrance do
     it "has a current value" do
       expect(secret.current_value).to eq(50)
     end
-    it "has a starting index" do
-      expect(secret.starting_index).to eq(50)
+
+    it "has a current index" do
+      expect(secret.current_index).to eq(50)
     end
+
     it "has a zero counter" do
       expect(secret.zero_counter).to eq(0)
+
+      secret.zero_counter += 10
+
+      expect(secret.zero_counter).to eq(10)
     end
   end
 end
