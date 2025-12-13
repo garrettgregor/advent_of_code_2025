@@ -48,16 +48,17 @@ RSpec.describe GiftShop do
       expect(shop.ranges).to eq(result)
     end
 
-    it "has a sum for invalid IDs" do
-      expect(shop.invalid_id_sum).to eq(0)
-
-      shop.invalid_id_sum += 11
-
-      expect(shop.invalid_id_sum).to eq(11)
-    end
-
     it "holds invalid ids" do
       expect(shop.invalid_ids).to eq([])
+    end
+
+    it "calculates the sum of invalid ids" do
+      expect(shop.invalid_ids_sum).to eq(0)
+
+      shop.invalid_ids << 1
+      shop.invalid_ids << 1
+
+      expect(shop.invalid_ids_sum).to eq(2)
     end
   end
 end
