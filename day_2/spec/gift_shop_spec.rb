@@ -8,6 +8,10 @@ RSpec.describe GiftShop do
   let(:shop) { described_class.new(file_path) }
 
   describe "#initialize" do
+    it "is a GiftShop" do
+      expect(shop).to be_a(described_class)
+    end
+
     it "has inputs" do
       result = %w[
         11-22
@@ -23,7 +27,6 @@ RSpec.describe GiftShop do
         2121212118-2121212124
       ]
 
-      expect(shop).to be_a(described_class)
       expect(shop.inputs).to eq(result)
     end
 
