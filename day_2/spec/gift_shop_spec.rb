@@ -26,5 +26,23 @@ RSpec.describe GiftShop do
       expect(shop).to be_a(described_class)
       expect(shop.inputs).to eq(result)
     end
+
+    it "has ranges" do
+      result = [
+        11..22,
+        95..115,
+        998..1012,
+        1_188_511_880..1_188_511_890,
+        222_220..222_224,
+        1_698_522..1_698_528,
+        446_443..446_449,
+        38_593_856..38_593_862,
+        565_653..565_659,
+        824_824_821..824_824_827,
+        2_121_212_118..2_121_212_124
+      ]
+
+      expect(shop.ranges).to eq(result)
+    end
   end
 end
