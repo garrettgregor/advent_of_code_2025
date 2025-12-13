@@ -55,5 +55,9 @@ RSpec.describe GiftShop do
 
       expect(shop.invalid_id_sum).to eq(11)
     end
+
+    it "holds invalid ids" do
+      expect(shop.invalid_ids).to eq([])
+    end
   end
 end
