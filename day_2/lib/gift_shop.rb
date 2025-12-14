@@ -18,4 +18,17 @@ class GiftShop
   def invalid_ids_sum
     @invalid_ids.sum
   end
+
+  def find_invalid_ids(range)
+    range.each do |num|
+      first_half = num.to_s[0..((num.to_s.length / 2) - 1)]
+      second_half = num.to_s[((num.to_s.length / 2))..]
+
+      @invalid_ids << num if first_half == second_half && !first_half.start_with?("0")
+    end
+  end
+
+  def part_1_total
+    require 'pry'; binding.pry
+  end
 end
