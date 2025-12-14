@@ -6,7 +6,6 @@ ruby "3.4.7"
 
 gem "amazing_print"
 gem "byebug"
-gem "pry"
 gem "pry-byebug"
 gem "rspec"
 gem "rubocop"
