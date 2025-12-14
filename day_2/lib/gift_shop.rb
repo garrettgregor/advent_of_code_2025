@@ -15,10 +15,6 @@ class GiftShop
     @part_2 = part_2
   end
 
-  def invalid_ids_sum
-    @invalid_ids.sum
-  end
-
   def find_invalid_ids(range)
     range.each do |num|
       first_half = num.to_s[0..((num.to_s.length / 2) - 1)]
@@ -29,6 +25,9 @@ class GiftShop
   end
 
   def part_1_total
-    require 'pry'; binding.pry
+    @ranges.each do |range|
+      find_invalid_ids(range)
+    end
+    @invalid_ids.sum
   end
 end
