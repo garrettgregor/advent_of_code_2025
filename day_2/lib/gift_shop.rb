@@ -24,7 +24,7 @@ class GiftShop
     end
   end
 
-  def part_1_total
+  def part_1
     @ranges.each { |range| find_invalid_ids(range) }
 
     @invalid_ids.sum

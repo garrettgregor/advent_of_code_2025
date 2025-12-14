@@ -88,10 +88,10 @@ RSpec.describe GiftShop do
     end
   end
 
-  describe "#part_1_total" do
+  describe "#part_1" do
     it "adds all the invalid ids" do
       result = 1_227_775_554
-      expect(shop.part_1_total).to eq(result)
+      expect(shop.part_1).to eq(result)
     end
   end
 end
