@@ -55,8 +55,8 @@ RSpec.describe GiftShop do
     it "calculates the sum of invalid ids" do
       expect(shop.invalid_ids_sum).to eq(0)
 
-      shop.invalid_ids << 1
-      shop.invalid_ids << 1
+        shop.invalid_ids << 1
+        shop.invalid_ids << 1
 
       expect(shop.invalid_ids_sum).to eq(2)
     end
