@@ -64,15 +64,44 @@ RSpec.describe GiftShop do
     end
 
     describe "#find_invalid_ids" do
-      it "finds all invalid ids in a range" do
-        expect(shop.find_invalid_ids(11..22)).to eq([11, 22])
-        expect(shop.find_invalid_ids(95..115)).to eq([99])
-        expect(shop.find_invalid_ids(998..1012)).to eq([1010])
-        expect(shop.find_invalid_ids(1_188_511_880..1_188_511_890)).to eq([1_188_511_885])
-        expect(shop.find_invalid_ids(222_220..222_224)).to eq([222_222])
-        expect(shop.find_invalid_ids(1_698_522..1_698_528)).to eq([])
-        expect(shop.find_invalid_ids(446_443..446_449)).to eq([446_446])
-        expect(shop.find_invalid_ids(38_593_856..38_593_862)).to eq([38_593_859])
+      it "finds all invalid ids in a range and adds them to invalid ids" do
+        shop.find_invalid_ids(11..22)
+        results = [11, 22]
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(95..115)
+        results << 99
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(998..1012)
+        results << 1010
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(1_188_511_880..1_188_511_890)
+        results << 1_188_511_885
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(222_220..222_224)
+        results << 222_222
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(1_698_522..1_698_528)
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(446_443..446_449)
+        results << 446_446
+        expect(shop.invalid_ids).to eq(results)
+
+        shop.find_invalid_ids(38_593_856..38_593_862)
+        results << 38_593_859
+        expect(shop.invalid_ids).to eq(results)
+      end
+    end
+
+    describe "#part_1_total" do
+      it "adds all the invalid ids" do
+        result = 1_227_775_554
+        expect(shop.part_1_total).to eq(result)
       end
     end
   end
